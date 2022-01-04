@@ -1,5 +1,5 @@
 import "../scss/app.scss";
-const R = require("ramda");
+import * as R from "ramda";
 
 window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
@@ -10,13 +10,9 @@ window.addEventListener("DOMContentLoaded", () => {
     { age: 23, class: "is-warning" },
     { job: "programmer", class: "is-danger" },
   ]);
+  console.log(getClasses);
   for (let i = 0; i < getClasses.length; i++) {
     const element = getClasses[i];
-    console.log(element);
     articles.classList.add(element);
   }
-
-  // for (let i = 0; i < getClasses.length; i++) {
-  //   const element = arrayToPluck[i];
-  // }
 });
